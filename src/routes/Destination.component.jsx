@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import DestinationItem from '../components/DestinationItem.component'
 import { destinations } from '../data/data.json'
+import DestinationItem from '../components/DestinationItem.component'
 
 const Destination = () => {
   const [itemName, setItemName] = useState('Moon')
@@ -17,7 +17,7 @@ const Destination = () => {
             <span className="text-gray-500 font-bold mr-6">01</span>PICK YOUR DESTINATION
           </h1>
           <div
-            className="flex gap-4 my-4 pr-12 font-barlow-condensed tracking-widest text-acColor"
+            className="flex gap-4 pr-12 font-barlow-condensed tracking-widest text-acColor"
           >
             {
               destinations.map(item => (
@@ -35,8 +35,8 @@ const Destination = () => {
                       `${item.name === itemName
                         ? "after:w-full after:bg-fgColor"
                         : "after:w-0 after:bg-fgColor/40"
-                      } after:absolute hover:after:w-full after:h-[2px] \
-                      after:-bottom-1 after:left-0 after:duration-300`
+                      } after:absolute after:h-[2px] after:-bottom-1 
+                      after:left-0 after:duration-300 hover:after:w-full`
                     }
                   >
                   </div>

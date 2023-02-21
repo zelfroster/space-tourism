@@ -5,7 +5,7 @@ module.exports = {
       backgroundImage: {
         mainBackground: "url('/home/background-home-desktop-hq.jpg')",
         destBackground: "url('/destination/background-destination-desktop-alt.jpg')",
-        crewBackground: "url('/crew/background-crew-desktop.jpg')",
+        crewBackground: "url('/crew/background-crew-desktop-alt.jpg')",
         techBackground: "url('/technology/background-technology-desktop.jpg')",
       },
       colors: {
