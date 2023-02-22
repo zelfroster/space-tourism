@@ -1,32 +1,42 @@
+import { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header.component";
 import { Home, Destination, Crew, Technology } from "./routes";
-import { useState, useEffect } from "react";
 
 function App() {
   const { pathname } = useLocation()
-  const [bgImage, setBgImage] = useState()
+  const [bgImageDesktop, setBgImageDesktop] = useState()
+  const [bgImageTablet, setBgImageTablet] = useState()
+  const [bgImageMobile, setBgImageMobile] = useState()
 
   //change background according to pathname
   useEffect(() => {
     switch (pathname) {
       case "/":
-        setBgImage('bg-mainBackground')
+        setBgImageDesktop('lg:bg-homeDesktop')
+        setBgImageTablet('sm:bg-homeTablet')
+        setBgImageMobile('bg-homeMobile')
         break;
       case "/destination":
-        setBgImage('bg-destBackground')
+        setBgImageDesktop('lg:bg-destDesktop')
+        setBgImageTablet('sm:bg-destTablet')
+        setBgImageMobile('bg-destMobile')
         break;
       case "/crew":
-        setBgImage('bg-crewBackground')
+        setBgImageDesktop('lg:bg-crewDesktop')
+        setBgImageTablet('sm:bg-crewTablet')
+        setBgImageMobile('bg-crewMobile')
         break;
       case "/technology":
-        setBgImage('bg-techBackground')
+        setBgImageDesktop('lg:bg-techDesktop')
+        setBgImageTablet('sm:bg-techTablet')
+        setBgImageMobile('bg-techMobile')
         break;
     }
   }, [pathname])
 
   return (
-    <div className={`w-full min-h-screen text-fgColor font-barlow bg-bgColor ${bgImage} bg-cover`}>
+    <div className={`w-full min-h-screen text-fgColor font-barlow bg-bgColor bg-cover ${bgImageMobile} ${bgImageTablet} ${bgImageDesktop}`}>
       <Routes>
         <Route path="/" element={<Header />}>
           <Route index element={<Home />} />
@@ -40,3 +50,8 @@ function App() {
 }
 
 export default App;
+
+
+
+
+

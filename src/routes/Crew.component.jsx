@@ -6,24 +6,25 @@ const Crew = () => {
   const [itemName, setItemName] = useState('Douglas Hurley')
   return (
     <main
-      className="max-w-7xl mx-auto flex justify-between px-20 mt-20 items-end"
+      className="max-w-7xl mx-auto flex justify-between px-20 mt-10 items-end lg:mt-20"
     >
-      <section className='w-full flex flex-col gap-16'>
+      <section className='w-full flex flex-col gap-10 lg:gap-16'>
         <h1
-          className="w-max text-2xl font-barlow-condensed tracking-[0.2em] uppercase"
+          className="text-xl font-barlow-condensed tracking-[0.2em] uppercase lg:text-2xl"
         >
-          <span className="text-gray-500 font-bold mr-6">02</span>Meet your crew
+          <span className="text-gray-500 font-bold -ml-6 mr-6 lg:ml-0">02</span>
+          <span>Meet your crew</span>
         </h1>
         {
           crew
             .filter(crewItem => crewItem.name === itemName)
             .map(crewItem =>
-              <div key={crewItem.name} className="uppercase flex justify-between gap-6 min-h-[45vh]" >
-                <div className="flex flex-col justify-between">
-                  <div className="flex flex-col animate-fade">
-                    <p className="text-fgColor/50 font-bellefair text-3xl">{crewItem.role}</p>
-                    <p className="text-fgColor font-bellefair text-5xl mt-4 mb-8">{crewItem.name}</p>
-                    <p className="text-acColor font-barlow text-md max-w-sm normal-case">{crewItem.bio}</p>
+              <div key={crewItem.name} className="uppercase flex justify-between gap-6 min-h-[22vh] lg:min-h-[45vh]" >
+                <div className="flex flex-col justify-between items-center w-full lg:items-start">
+                  <div className="flex flex-col animate-fade text-center lg:text-start">
+                    <p className="text-fgColor/50 font-bellefair text-2xl lg:text-3xl">{crewItem.role}</p>
+                    <p className="text-fgColor font-bellefair text-4xl mt-2 mb-4 lg:mb-8 lg:mt-4 lg:text-5xl">{crewItem.name}</p>
+                    <p className="text-acColor font-barlow text-md max-w-md normal-case lg:max-w-sm">{crewItem.bio}</p>
                   </div>
                   <div
                     className="flex gap-4 font-barlow-condensed tracking-widest text-acColor"
@@ -50,7 +51,10 @@ const Crew = () => {
                     }
                   </div>
                 </div>
-                <img className="max-h-[600px] max-w-[500px] animate-fade absolute bottom-0 right-48" src={crewItem.images.png} alt="crew member image" />
+                <img className="max-h-[550px] max-w-[500px] absolute bottom-0 right-1/2 translate-x-1/2 animate-fade lg:right-48 lg:translate-x-0"
+                  src={crewItem.images.png}
+                  alt="crew member image"
+                />
               </div>
             )
         }

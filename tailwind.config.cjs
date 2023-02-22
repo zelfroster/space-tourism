@@ -3,10 +3,18 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        mainBackground: "url('/home/background-home-desktop-hq.jpg')",
-        destBackground: "url('/destination/background-destination-desktop-alt.jpg')",
-        crewBackground: "url('/crew/background-crew-desktop-alt.jpg')",
-        techBackground: "url('/technology/background-technology-desktop.jpg')",
+        homeDesktop: "url('/home/background-home-desktop-hq.jpg')",
+        homeTablet: "url('/home/background-home-tablet.jpg')",
+        homeMobile: "url('/home/background-home-mobile.jpg')",
+        destDesktop: "url('/destination/background-destination-desktop-alt.jpg')",
+        destTablet: "url('/destination/background-destination-tablet.jpg')",
+        destMobile: "url('/destination/background-destination-mobile.jpg')",
+        crewDesktop: "url('/crew/background-crew-desktop-alt.jpg')",
+        crewTablet: "url('/crew/background-crew-tablet.jpg')",
+        crewMobile: "url('/crew/background-crew-mobile.jpg')",
+        techDesktop: "url('/technology/background-technology-desktop.jpg')",
+        techTablet: "url('/technology/background-technology-tablet.jpg')",
+        techMobile: "url('/technology/background-technology-mobile.jpg')",
       },
       colors: {
         bgColor: "#0B0D17",
