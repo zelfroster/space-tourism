@@ -24,7 +24,7 @@ const Home = () => {
           SPACE
         </h1>
         <p
-          className="max-w-xs text-sm text-acColor leading-6 md:text-md md:leading-7
+          className="max-w-[290px] text-sm text-acColor leading-6 md:text-md md:leading-7
                      md:max-w-lg lg:mt-4 lg:leading-6 lg:max-w-sm 2xl:text-2xl
                      2xl:max-w-xl"
         >
