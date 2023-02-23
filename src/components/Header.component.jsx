@@ -7,14 +7,15 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <>
-      <header className="w-full flex justify-between items-center gap-14 pl-8 pt-8 md:pt-0 md:pl-12 lg:pt-10">
-        <img src="/shared/logo.svg" alt="Logo" />
-        <div className="hidden bg-fgColor/50 w-full h-px z-10 lg:block"></div>
+      <header className="w-full flex justify-between items-center gap-14 pl-8 pt-8 md:pt-0 md:pl-12 lg:pt-10 2xl:pt-12 2xl:pl-16 2xl:gap-20">
+        <img src="/shared/logo.svg" alt="Logo" className="2xl:w-48" />
+        <div className="hidden bg-fgColor/30 w-full h-px z-50 lg:block"></div>
         <nav
           className={`
             ${isOpen ? "flex" : "hidden"} gap-12 text-lg font-barlow-condensed 
             bg-[#D2D2D210] backdrop-blur-2xl h-screen absolute top-0 right-0 z-40
-            flex-col pt-36 sm:px-12 md:pt-0 md:h-auto md:relative md:flex-row md:flex lg:-ml-20 lg:pl-32 lg:pr-48`}
+            flex-col pt-36 sm:px-12 md:pt-0 md:h-auto md:relative md:flex-row md:flex 
+            lg:-ml-20 lg:pl-32 lg:pr-48 2xl:pl-48 2xl:pr-64 2xl:-ml-24 2xl:gap-16 animate-slide`}
         >
           <NavItem
             active={pathname === '/' ? "active" : ""}

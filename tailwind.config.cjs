@@ -27,12 +27,17 @@ module.exports = {
         'bellefair': 'Bellefair, serif',
       },
       animation: {
-        fade: "fade 800ms ease-in-out"
+        fade: "fade 800ms ease-in-out",
+        slide: "slide 400ms ease-in-out"
       },
       keyframes: {
         fade: {
           '0%': { transform: 'translateY(50px)', opacity: 0 },
           '100%': { transform: 'translateY(0px)', opacity: 1 },
+        },
+        slide: {
+          '0%': { transform: 'translateX(50px)', opacity: 0 },
+          '100%': { transform: 'translateX(0px)', opacity: 1 },
         }
       }
     },
