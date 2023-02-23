@@ -6,11 +6,12 @@ const Technology = () => {
   const [itemName, setItemName] = useState('Launch vehicle')
   return (
     <main className="max-w-7xl mx-auto flex justify-between mt-10 items-end lg:mt-20 lg:px-20">
-      <section className='w-full flex flex-col gap-16'>
+      <section className='w-full flex flex-col gap-12 md:gap-16'>
         <h1
-          className="w-max px-20 text-xl font-barlow-condensed tracking-[0.2em] uppercase lg:px-0 lg:text-2xl"
+          className="text-md font-barlow-condensed tracking-[0.2em] uppercase text-center md:text-start md:text-xl lg:text-2xl"
         >
-          <span className="text-gray-500 font-bold -ml-6 mr-6 lg:ml-0">03</span>Space launch 101
+          <span className="text-gray-500 font-bold mr-6 md:-ml-6 lg:ml-0">03</span>
+          <span>Space launch 101</span>
         </h1>
         {
           technology
@@ -35,9 +36,9 @@ const Technology = () => {
                               ? "bg-fgColor text-bgColor border-fgColor"
                               : "text-fgColor border-fgColor/30"
                             } 
-                            relative flex justify-center items-center w-16 h-16
-                            rounded-full uppercase font-bellefair text-2xl 
-                            border duration-300 hover:border-fgColor
+                            relative flex justify-center items-center w-10 h-10
+                            rounded-full uppercase font-bellefair text-lg 
+                            border duration-300 hover:border-fgColor md:text-2xl md:w-16 md:h-16
                             `
                           }
                           onClick={() => setItemName(item.name)}
@@ -48,9 +49,9 @@ const Technology = () => {
                     }
                   </div>
                   <div className="flex flex-col animate-fade items-center text-center lg:items-start lg:text-start">
-                    <p className="text-acColor font-barlow-condensed text-sm tracking-[0.2rem]">The Terminology...</p>
-                    <p className="text-fgColor font-bellefair text-5xl mt-4 mb-8">{crewItem.name}</p>
-                    <p className="text-acColor font-barlow text-md max-w-md normal-case leading-7">{crewItem.description}</p>
+                    <p className="text-acColor font-barlow-condensed text-sm tracking-[0.15em] md:tracking-[0.2rem]">The Terminology...</p>
+                    <p className="text-fgColor font-bellefair text-2xl mt-2 mb-4 md:mb-8 md:mt-2 md:text-5xl">{crewItem.name}</p>
+                    <p className="text-acColor font-barlow text-sm max-w-xs normal-case leading-6 md:max-w-md md:leading-7 md:text-md">{crewItem.description}</p>
                   </div>
                 </div>
                 <img

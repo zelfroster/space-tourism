@@ -7,7 +7,7 @@ const NavItem = ({ active, route, itemNumber, itemName }) => {
       <div
         className={
           `${active
-            ? "after:w-1 after:bg-fgColor md:after:w-full"
+            ? "after:w-2 after:bg-fgColor md:after:w-full"
             : "after:bg-fgColor/40 md:after:w-0"
           } 
           pr-16 pl-10 after:absolute after:h-full after:top-0 md:after:top-auto after:left-auto 
