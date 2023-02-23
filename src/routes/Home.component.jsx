@@ -24,8 +24,9 @@ const Home = () => {
           SPACE
         </h1>
         <p
-          className="max-w-xs text-md text-acColor leading-7 md:max-w-lg lg:mt-4
-                     lg:leading-6 lg:max-w-sm 2xl:text-2xl 2xl:max-w-xl"
+          className="max-w-xs text-sm text-acColor leading-6 md:text-md md:leading-7
+                     md:max-w-lg lg:mt-4 lg:leading-6 lg:max-w-sm 2xl:text-2xl
+                     2xl:max-w-xl"
         >
           Let's face it; if you want to go to space, you might as well genuinely
           go to outer space and not hover kind of on the edge of it. Well sit
